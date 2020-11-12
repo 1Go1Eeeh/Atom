@@ -63,13 +63,13 @@ app.get('/dynamic', function(req, res) {
 // res.send(sp);
 
 res.send(`<script>
-  alert('안녕! 이라고 말하지마~~~')
-  yesorno=confirm('Are you a male?')
+  alert('안녕! 이라고 말하지마~~~ 라고 했니 안했니???')
+  yesorno=confirm('Male for Yes, Female for No')
   document.open()
   if(yesorno==true)
-  document.write("Ysou are <font color=blue> a MALE </font>. Go to LEFT!")
+  document.write("<font color=blue> MALE? </font>. LEFT Side Please!")
   else
-  document.write("You are <font color=pink> a Female </font>. You are Always RIGHT!")
+  document.write("Welcome, <font color=pink> Ladies! </font> You are <font color=pink> Always RIGHT! </font>")
   </script>`);
 });
 
