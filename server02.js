@@ -64,6 +64,12 @@ app.get('/dynamic', function(req, res) {
 
 res.send(`<script>
   alert('안녕! 이라고 말하지마~~~')
+  yesorno=confirm('Are you a male?')
+  document.open()
+  if(yesorno==true)
+  document.write("Ysou are <font color=blue> a MALE </font>. Go to LEFT!")
+  else
+  document.write("You are <font color=pink> a Female </font>. You are Always RIGHT!")
   </script>`);
 });
 
