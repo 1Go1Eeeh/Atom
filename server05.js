@@ -41,10 +41,6 @@ res.send(`<script>
 
 app.get('/test', function(req, res){
 
-/*  var id = req.query.id;
-    var qr = req.query.name;
-    res.send(id + ' , ' + qr); */
-
     var arr=[
       'Coffee',
       'Tea',
@@ -67,6 +63,11 @@ app.get('/test', function(req, res){
     `
     res.send(pick)
 })
+
+app.get('/inf', function(req, res){
+  res.render('inf')
+});
+
 
 app.listen(3003, function(){
   console.log('Server Running 3003 Port');
