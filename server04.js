@@ -1,41 +1,12 @@
-// const http = require('http');
-//
-// const hostname = '127.0.0.1';
-// const port = 3000;
-//
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Hello World');
-// });
-//
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
-//
-
-// var http = require('http')       // App으로 넘어 가니깐 생략~!
-// var server = http.createServer();  // App으로 넘어 가니깐 생략~!
 var express = require('express')
 var app = express()
 app.set('view engine', 'pug');
 app.set('views', './html');
 app.locals.pretty = true;
-// server.on('request', doRequest);   // App으로 넘어 가니깐 생략~!
-// server.listen(3003);               // App으로 넘어 가니깐 생략~!
-// console.log('starting Server!!!')  // App으로 넘어 가니깐 생략~!
-// function doRequest(req,res) {
-//   res.writeHead(200, {'Content-Type':'text/plain; charset=utf-8'})
-//   res.write(' Your First time visiting my NodeJS Server? \n Vítejte na mém nodejs serveru!\n 어서오시와 yo~ 환영합니다 yo!')
-//   res.end();
-// }
 
 app.use(express.static('data'))
-
- // '/' 내위치, 기본위치 (localhost:3003)
- // creating routers
 app.get('/', function(req,res) {
-  res.send('<h1>You are now at the Maingate of The Castle!<h1>')
+  res.send('<h1>You are now at the MAINGATE of The Castle!<h1>')
 });
 
 app.get('/topic', function(req,res){
@@ -45,18 +16,6 @@ app.get('/topic', function(req,res){
 app.get('/pug', function(req,res){
   res.render('news')
 });
-
-// html 줄바꿈: https://hianna.tistory.com/300
-// 1) break in between words; 사과<br>바나나<br>포도<br>
-//
-
-// app.get('/login', function(req,res){
-//   res.send(' Would you like to get into The Castle? <br> Please allow our knights to escort your way!')
-// });
-//
-// app.get('/signup', function(req,res){
-//   res.send('Please sign up for your prestige membership for The Castle')
-// });
 
 app.get('/dynamic', function(req, res) {
 // js내에서 쓰는 구문으로 사용!
