@@ -1,16 +1,40 @@
 doctype Html
 Html
- head
+  head
    meta(charset='utf-8')
    // 주석처리 이것은 보인다.
-   //- 이것은 안보인다
-   body
-    ol 
+   //- 네놈이 진정 주석이었구나! invisible comment!!!
+   //- ALIGN!!!!!!!!!!!!!!!!!!! 
+    
+   title= tl
+   //-  = 변수, #{변l}
+  body
+  //-  ol  //- Ordered list, number will be added automatically
+      -for (var i=0; i<10; i++)
+        li Coffee
+    ol    
+      -for (var i=0; i<3; i++)
+        li Red Ginseng Tea      
+        li Red Ginseng Milk
+  -//  
+    ul  //- Unordered list
       li Coffee
-      li Red Ginseng Tea
+      ul
+        li  Hawaiian Kona 100%
+        li  Columbia Supremo 1970; L'ambre Style
+        li  Panama Geisha
+      
+      
+      li Tea
+        ul
+          li  Green Tea
+          li  Red Ginseng Tea 
+            ul
+              li Korean 975
+              li Ulantumbria
+              
       li Milk
-    ul
-      li Coffee
-      li Red Ginseng Tea
-      li Milk
-   
+        ul
+          li  Royal Danish; Low temperature pasturized
+          li  Ohio Pure Green
+    

@@ -14,7 +14,7 @@ app.get('/topic', function(req,res){
 });
 
 app.get('/pug', function(req,res){
-  res.render('news')
+  res.render('news', {tl:'머릿말 입니다 yo'})
 });
 
 app.get('/dynamic', function(req, res) {
@@ -38,6 +38,23 @@ res.send(`<script>
   document.write("Welcome, <font color=pink> Ladies! </font> You are <font color=pink> Always RIGHT! </font>")
   </script>`);
 });
+
+app.get('/test', function(req, res){
+    /* var id = req.query.id;
+    var qr = req.query.name;
+    res.send(id + ' , ' + qr); */
+
+    var arr=[
+      'Coffee'
+      'Tea'
+      'Milk'
+      'Pasta'
+      'Steak'
+      'Wine'
+      'Dessert'
+    ]
+    res.send(arr[req.query.id])
+})
 
 app.listen(3003, function(){
   console.log('Server Running 3003 Port');
