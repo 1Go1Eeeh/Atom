@@ -14,7 +14,7 @@ app.get('/topic', function(req,res){
 });
 
 app.get('/pug', function(req,res){
-  res.render('news', {tl:'머릿말 입니다 yo'})
+  res.render('news', {tl:'Good Day, Mate!'})
 });
 
 app.get('/dynamic', function(req, res) {
@@ -72,11 +72,11 @@ app.get('/Login', function(req, res) {
   var ID=req.query.ID;
   var PW=req.query.PW;
 
-  res.send('Welcome, " + ID)
+  res.send('Welcome, ' + ID)
   res.render('Login')
 });
 
-app.get('/PW', funcion(req, res) {
+app.get('/PW', function(req, res) {
   res.render('PW')
 });
 

@@ -14,7 +14,7 @@ app.get('/topic', function(req,res){
 });
 
 app.get('/pug', function(req,res){
-  res.render('news', {tl:'머릿말 입니다 yo'})
+  res.render('news', {tl:'Red or White?'})
 });
 
 app.get('/dynamic', function(req, res) {
