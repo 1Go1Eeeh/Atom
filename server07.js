@@ -68,17 +68,23 @@ app.get('/inf', function(req, res){
   res.render('inf')
 });
 
-app.get('/Login', function(req, res) {
-  var ID=req.query.ID;
-  var PW=req.query.PW;
+app.get('/info', function(req, res){
+  res.send('<a href="/infpop">변</a>')
+})
 
-  res.send('Welcome, ' + ID)
-  res.render('Login')
+app.get('/info', function(req, res) {
+  res.send('비번 변경창 <br>'
+            + req.query.ID + ' 님 안녕하세  <br>'
+            + req.query.PW + ' 의 비번 수정? <br>'
+            + req.query.PW + '==> _________  <br>'
+            + '<a href="/infpop">변경</a>'
+          )
 });
 
-app.get('/PW', function(req, res) {
-  res.render('PW')
+app.get('/infpop', function(req, res){
+  res.send('/infpop page')</scrtipt>')
 });
+
 
 app.listen(3003, function(){
   console.log('Server Running 3003 Port');
