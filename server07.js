@@ -69,7 +69,7 @@ app.get('/inf', function(req, res){
 });
 
 app.get('/info', function(req, res){
-  res.send('<a href="/infpop">변</a>')
+  res.send('<a href="/infpop">변경</a>')
 })
 
 app.get('/info', function(req, res) {
@@ -81,8 +81,8 @@ app.get('/info', function(req, res) {
           )
 });
 
-app.get('/infpop', function(req, res){
-  res.send('/infpop page')</scrtipt>')
+app.get('/infpop', function(req, res) {
+  res.send('/infpop page')
 });
 
 
