@@ -1,0 +1,23 @@
+doctype HTML
+HTML
+    head
+      meta(charset='utf-8')
+        
+    body
+      p
+        h1 SHA256 Hash Generator; <br> 
+        h2     powered by YW Cho <br>
+        h2 Please type in your data you wish you hash: 
+        
+      form(action='/hash')
+        p
+          input(type='text' name='key' placeholder=' Your Data')
+          <br>
+        p
+          input(type='reset' value='Clear')
+          input(type='submit' value='Hash it!')
+          <br>
+        p
+          h2 SHA256 Hash  
+          h3 #{K} : #{H}
+          h3 Doubled SHA256 Hash : #{H2}

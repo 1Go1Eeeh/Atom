@@ -74,7 +74,7 @@ app.get('/info', function(req, res){
 
 app.get('/info', function(req, res) {
   res.send('비번 변경창 <br>'
-            + req.query.ID + ' 님 안녕하세  <br>'
+            + req.query.ID + ' 님 안녕하세요  <br>'
             + req.query.PW + ' 의 비번 수정? <br>'
             + req.query.PW + '==> _________  <br>'
             + '<a href="/infpop">변경</a>'
@@ -83,6 +83,7 @@ app.get('/info', function(req, res) {
 
 app.get('/infpop', function(req, res) {
   res.send('/infpop page')
+  // res.send('<script>alert('변경완료')</script>')
 });
 
 
