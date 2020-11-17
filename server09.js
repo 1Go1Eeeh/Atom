@@ -1,4 +1,5 @@
 var express = require('express')
+var sha = require('./SHA256_ex/sha256_a&p.js'); //- hash.pug 사용하기 위해 added!
 var app = express()
 app.set('view engine', 'pug');
 app.set('views', './html');  //html폴더에
@@ -69,16 +70,16 @@ app.get('/hash', function(req, res) {
     var input = req.query.iin;
     var result = sha.s(input);
     var result2 = sha.s(result);
-    resrender('hash', {in_val:input, hashout:result, hashout2:result2})
+    res.render('hash', {in_val:input, hashout:result, hashout2:result2})
   } else {
-    res.render('hash', {in_val:'Empty', hashout:'Hash 1', hashout2:'Hash2'})
+    res.render('hash', {in_val:'Empty', hashout:'Hash1', hashout2:'Hash2'})
   }
 });
 
 // // YW CHO
 // app.get('/hash',function(req,res){
 // //  var hs= req.query.hs;
-// 
+//
 //   res.render('hash');
 // });
 // app.get('/hash1',function(req,res){

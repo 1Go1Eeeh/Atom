@@ -4,19 +4,45 @@ HTML
       meta(charset='utf-8')
         
     body
-      p
-        h1 SHA256 Hash Generator; <br> 
-        h2     powered by YW Cho <br>
-        h2 Please type in your data you wish you hash: 
-        
-      form(action='/hash1')
+      form(action='/hash')
         p
-          input(type='text' name='key' placeholder=' Your Data')
-          <br>
+          h2 SHA256 Hash Generator; <br> 
+          input(type='text' name='iin' placeholder=' Your Data')
         p
           input(type='reset' value='Clear')
           input(type='submit' value='Hash it!')
-          <br>
-        p
-          h2 SHA256 Hash  
-          
+        
+        article
+          h4 SHA256 Hash :
+          b= in_val + ' : '
+          br
+          = hashout
+          br
+          b Doubled SHA256 :
+          br
+          = hashout2
+        
+                
+
+
+          //- HTML
+          //-     head
+          //-       meta(charset='utf-8')
+          //- 
+          //-     body
+          //-       p
+          //-         h1 SHA256 Hash Generator; <br> 
+          //-         h2     powered by YW Cho <br>
+          //-         h2 Please type in your data you wish you hash: 
+          //- 
+          //-       form(action='/hash1')
+          //-         p
+          //-           input(type='text' name='key' placeholder=' Your Data')
+          //-           <br>
+          //-         p
+          //-           input(type='reset' value='Clear')
+          //-           input(type='submit' value='Hash it!')
+          //-           <br>
+          //-         p
+          //-           h2 SHA256 Hash  
+          //- 
